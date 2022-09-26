@@ -4,6 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faCircleCheck, faPen, faTrashCan} from '@fortawesome/free-solid-svg-icons'
 
+  // To do 
 const ToDo = ({ toDo, markDone, setUpdateData, deleteTask }) => {
     return(
       <>

@@ -10,11 +10,13 @@ import './App.css';
 
 function App() {
 
+  // Managing State
   const [toDo, setToDo] = useState([]);
 
   const [newTask, setNewTask] = useState('');
   const [updateData, setUpdateData] = useState('');
 
+  // Adding a new task
   const addTask = () => {
     if(newTask) {
       let num = toDo.length + 1;
@@ -24,12 +26,13 @@ function App() {
     }
   }
 
-
+// Deleting a task
   const deleteTask = (id) => {
     let newTasks = toDo.filter( task => task.id !== id)
     setToDo(newTasks)
   }
 
+  // When a task is done
   const markDone = (id) => {
     let newTask = toDo.map( task => {
       if(task.id === id) {
@@ -44,6 +47,7 @@ function App() {
     setUpdateData('');
   }
 
+  
   const changeTask = (e) => {
     let newEntry = {
       id: updateData.id,
@@ -53,6 +57,7 @@ function App() {
     setUpdateData(newEntry);
   }
 
+// Updating and existing task
   const updateTask = ()=> {
     let filterRecords = [...toDo].filter( task => task.id !== updateData.id);
     let updateObject = [...filterRecords, updateData]

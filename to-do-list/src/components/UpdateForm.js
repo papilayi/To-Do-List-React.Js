@@ -1,5 +1,6 @@
 const UpdateForm = ({ updateData, changeTask, updateTask, cancelUpdate  }) => {
     return(
+      // To update form data
       <>
         <div className='row'>
           <div className='col'>
